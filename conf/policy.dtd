@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="gbk" ?>
+<!ELEMENT Policy (PatternDefine,ActionDefine,Rule*)>
+<!ELEMENT PatternDefine ((DistributeIpAttack|DistributeAgentAttack|DistributeReferAttack|DistributeURIAttack|DistributeArgsAttack|IpDict)*)>
+<!ELEMENT ActionDefine (#PCDATA)>
+<!ELEMENT DistributeIpAttack (PolicyTest*,BadUserNumThreshold*,BadUserTimePeriod*,CacheNum*,TimePeriod*,Threshold*,StatID*)>
+<!ELEMENT DistributeAgentAttack (PolicyTest*,BadUserNumThreshold*,BadUserTimePeriod*,CacheNum*,TimePeriod*,Threshold*,StatID*)>
+<!ELEMENT DistributeReferAttack (PolicyTest*,BadUserNumThreshold*,BadUserTimePeriod*,CacheNum*,TimePeriod*,Threshold*,StatID*)>
+<!ELEMENT DistributeURIAttack (PolicyTest*,BadUserNumThreshold*,BadUserTimePeriod*,CacheNum*,TimePeriod*,Threshold*,StatID*)>
+<!ELEMENT DistributeArgsAttack (PolicyTest*,BadUserNumThreshold*,BadUserTimePeriod*,CacheNum*,TimePeriod*,Threshold*,StatID*,HashKey*)>
+<!ELEMENT IpDict (DictFile*,DictMax*)>
+<!ELEMENT CacheNum (#PCDATA)>
+<!ELEMENT TimePeriod (#PCDATA)>
+<!ELEMENT Threshold (#PCDATA)>
+<!ELEMENT PolicyTest (#PCDATA)>
+<!ELEMENT BadUserNumThreshold (#PCDATA)>
+<!ELEMENT BadUserTimePeriod (#PCDATA)>
+<!ELEMENT StatID (#PCDATA)>
+<!ELEMENT HashKey (#PCDATA)>
+<!ELEMENT DictFile (#PCDATA)>
+<!ELEMENT DictMax (#PCDATA)>
+<!ELEMENT Rule (Pattern?,Action)>
+<!ELEMENT Action ((ReturnCode|ReturnLocation)*)>
+<!ELEMENT ReturnCode EMPTY>
+<!ELEMENT ReturnLocation EMPTY>
+<!ELEMENT Pattern ((AND | OR))>
+<!ELEMENT AND ((DistributeIpAttack|DistributeAgentAttack|DistributeReferAttack|DistributeURIAttack|DistributeArgsAttack|IpDict|HttpFilter|OR|AND|LuaFilter)*)>
+<!ELEMENT OR ((DistributeIpAttack|DistributeAgentAttack|DistributeReferAttack|DistributeURIAttack|DistributeArgsAttack|IpDict|HttpFilter|AND|OR|LuaFilter)*)>
+<!ELEMENT HttpFilter (HTTP_URI|HTTP_AGENT|HTTP_REFER|HTTP_COOKIE|HTTP_HOST|HTTP_ENCODE|HTTP_URI_C|HTTP_AGENT_C|HTTP_REFER_C|HTTP_COOKIE_C|HTTP_HOST_C|HTTP_ENCODE_C|HTTP_NEW_FILTER)+>
+<!ELEMENT HTTP_URI EMPTY>
+<!ELEMENT HTTP_AGENT EMPTY>
+<!ELEMENT HTTP_REFER EMPTY>
+<!ELEMENT HTTP_COOKIE EMPTY>
+<!ELEMENT HTTP_HOST EMPTY>
+<!ELEMENT HTTP_ENCODE EMPTY>
+<!ELEMENT HTTP_URI_C EMPTY>
+<!ELEMENT HTTP_AGENT_C EMPTY>
+<!ELEMENT HTTP_REFER_C EMPTY>
+<!ELEMENT HTTP_COOKIE_C EMPTY>
+<!ELEMENT HTTP_HOST_C EMPTY>
+<!ELEMENT HTTP_ENCODE_C EMPTY>
+<!ELEMENT HTTP_NEW_FILTER EMPTY>
+
+<!ATTLIST LuaFilter
+	lua_file_name CDATA ""
+>
+
+<!ATTLIST HTTP_NEW_FILTER
+	match CDATA ""
+	notmatch CDATA ""
+	var_name CDATA ""
+>
+
+<!ATTLIST DistributeIpAttack
+	match CDATA ""
+	define ID #IMPLIED
+>
+<!ATTLIST DistributeAgentAttack
+	match CDATA ""
+	define ID #IMPLIED
+>
+<!ATTLIST DistributeReferAttack
+	match CDATA ""
+	define ID #IMPLIED
+>
+<!ATTLIST DistributeURIAttack
+	match CDATA ""
+	define ID #IMPLIED
+>
+
+
+<!ATTLIST DistributeArgsAttack
+	match CDATA ""
+	define ID #IMPLIED
+>
+<!ATTLIST IpDict
+	match CDATA ""
+	define ID #IMPLIED
+>
+<!ATTLIST Rule
+	type (PRE|HANDLE) #REQUIRED
+	skip CDATA #REQUIRED
+>
+<!ATTLIST HTTP_HOST
+	match CDATA ""
+	notmatch CDATA ""
+>
+<!ATTLIST HTTP_URI
+	match CDATA ""
+	notmatch CDATA ""
+>
+<!ATTLIST HTTP_AGENT
+	match CDATA ""
+	notmatch CDATA ""
+>
+<!ATTLIST HTTP_REFER
+	match CDATA ""
+	notmatch CDATA ""
+>
+<!ATTLIST HTTP_COOKIE
+	match CDATA ""
+	notmatch CDATA ""
+>
+<!ATTLIST HTTP_ENCODE
+	match CDATA ""
+	notmatch CDATA ""
+>
+<!ATTLIST HTTP_HOST_C
+	match CDATA ""
+	notmatch CDATA ""
+>
+<!ATTLIST HTTP_URI_C
+	match CDATA ""
+	notmatch CDATA ""
+>
+<!ATTLIST HTTP_AGENT_C
+	match CDATA ""
+	notmatch CDATA ""
+>
+<!ATTLIST HTTP_REFER_C
+	match CDATA ""
+	notmatch CDATA ""
+>
+<!ATTLIST HTTP_COOKIE_C
+	match CDATA ""
+	notmatch CDATA ""
+>
+<!ATTLIST HTTP_ENCODE_C
+	match CDATA ""
+	notmatch CDATA ""
+>
+<!ATTLIST ReturnCode
+	Code CDATA ""
+>
+<!ATTLIST ReturnLocation
+	Location CDATA ""
+>

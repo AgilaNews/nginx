@@ -1,0 +1,162 @@
+2016/04/21 13:04:35 [debug] 18788#0: bind() 0.0.0.0:1984 #6 
+2016/04/21 13:04:35 [notice] 18788#0: using the "epoll" event method
+2016/04/21 13:04:35 [notice] 18788#0: nginx/1.8.1
+2016/04/21 13:04:35 [notice] 18788#0: OS: Linux 4.1.15-gentoo-r1
+2016/04/21 13:04:35 [notice] 18788#0: getrlimit(RLIMIT_NOFILE): 1024:4096
+2016/04/21 13:04:35 [debug] 18789#0: write: 7, 00007FFD43EEC300, 6, 0
+2016/04/21 13:04:35 [debug] 18789#0: notify eventfd: 7
+2016/04/21 13:04:35 [debug] 18789#0: malloc: 0000000001C26D50:6144
+2016/04/21 13:04:35 [debug] 18789#0: malloc: 0000000001C21D30:13824
+2016/04/21 13:04:35 [debug] 18789#0: malloc: 0000000001C28560:6656
+2016/04/21 13:04:35 [debug] 18789#0: malloc: 0000000001C45650:6656
+2016/04/21 13:04:35 [debug] 18789#0: epoll add event: fd:6 op:1 ev:00002001
+2016/04/21 13:04:35 [debug] 18789#0: worker cycle
+2016/04/21 13:04:35 [debug] 18789#0: epoll timer: -1
+2016/04/21 13:04:35 [debug] 18789#0: epoll: fd:6 ev:0001 d:0000000001C21D30
+2016/04/21 13:04:35 [debug] 18789#0: accept on 0.0.0.0:1984, ready: 0
+2016/04/21 13:04:35 [debug] 18789#0: posix_memalign: 0000000001C1D600:256 @16
+2016/04/21 13:04:35 [debug] 18789#0: *1 accept: 127.0.0.1:42745 fd:8
+2016/04/21 13:04:35 [debug] 18789#0: posix_memalign: 0000000001C1D710:256 @16
+2016/04/21 13:04:35 [debug] 18789#0: *1 event timer add: 8: 60000:1461215135451
+2016/04/21 13:04:35 [debug] 18789#0: *1 reusable connection: 1
+2016/04/21 13:04:35 [debug] 18789#0: *1 epoll add event: fd:8 op:1 ev:80002001
+2016/04/21 13:04:35 [debug] 18789#0: timer delta: 17
+2016/04/21 13:04:35 [debug] 18789#0: worker cycle
+2016/04/21 13:04:35 [debug] 18789#0: epoll timer: 60000
+2016/04/21 13:04:35 [debug] 18789#0: epoll: fd:8 ev:0001 d:0000000001C21E08
+2016/04/21 13:04:35 [debug] 18789#0: *1 http wait request handler
+2016/04/21 13:04:35 [debug] 18789#0: *1 malloc: 0000000001C25340:1024
+2016/04/21 13:04:35 [debug] 18789#0: *1 recv: fd:8 134 of 1024
+2016/04/21 13:04:35 [debug] 18789#0: *1 reusable connection: 0
+2016/04/21 13:04:35 [debug] 18789#0: *1 posix_memalign: 0000000001C47060:4096 @16
+2016/04/21 13:04:35 [debug] 18789#0: *1 http process request line
+2016/04/21 13:04:35 [debug] 18789#0: *1 http request line: "GET /req HTTP/1.1"
+2016/04/21 13:04:35 [debug] 18789#0: *1 http uri: "/req"
+2016/04/21 13:04:35 [debug] 18789#0: *1 http args: ""
+2016/04/21 13:04:35 [debug] 18789#0: *1 http exten: ""
+2016/04/21 13:04:35 [debug] 18789#0: *1 http process request header line
+2016/04/21 13:04:35 [debug] 18789#0: *1 http header: "Host: localhost"
+2016/04/21 13:04:35 [debug] 18789#0: *1 http header: "Connection: close"
+2016/04/21 13:04:35 [debug] 18789#0: *1 http header: "X-USER-A: zhangguanxing"
+2016/04/21 13:04:35 [debug] 18789#0: *1 http header: "X-USER-D: zhangguanxing"
+2016/04/21 13:04:35 [debug] 18789#0: *1 http header: "AUTHORIZATION: singnature"
+2016/04/21 13:04:35 [debug] 18789#0: *1 http header done
+2016/04/21 13:04:35 [debug] 18789#0: *1 event timer del: 8: 1461215135451
+2016/04/21 13:04:35 [debug] 18789#0: *1 generic phase: 0
+2016/04/21 13:04:35 [debug] 18789#0: *1 rewrite phase: 1
+2016/04/21 13:04:35 [debug] 18789#0: *1 test location: "/"
+2016/04/21 13:04:35 [debug] 18789#0: *1 test location: ~ "/(.*)$"
+2016/04/21 13:04:35 [debug] 18789#0: *1 using configuration "/(.*)$"
+2016/04/21 13:04:35 [debug] 18789#0: *1 http cl:-1 max:31457280
+2016/04/21 13:04:35 [debug] 18789#0: *1 rewrite phase: 3
+2016/04/21 13:04:35 [debug] 18789#0: *1 posix_memalign: 0000000001C48070:4096 @16
+2016/04/21 13:04:35 [debug] 18789#0: *1 http script complex value
+2016/04/21 13:04:35 [debug] 18789#0: *1 http script capture: "req"
+2016/04/21 13:04:35 [debug] 18789#0: *1 http script set $req_path
+2016/04/21 13:04:35 [debug] 18789#0: *1 post rewrite phase: 4
+2016/04/21 13:04:35 [debug] 18789#0: *1 generic phase: 5
+2016/04/21 13:04:35 [debug] 18789#0: *1 generic phase: 6
+2016/04/21 13:04:35 [debug] 18789#0: *1 generic phase: 7
+2016/04/21 13:04:35 [debug] 18789#0: *1 access phase: 8
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua access handler, uri:"/req" c:1
+2016/04/21 13:04:35 [debug] 18789#0: *1 access phase: 8
+2016/04/21 13:04:35 [debug] 18789#0: *1 access phase: 9
+2016/04/21 13:04:35 [debug] 18789#0: *1 access phase: 10
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua access handler, uri:"/req" c:1
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua creating new thread
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua reset ctx
+2016/04/21 13:04:35 [debug] 18789#0: *1 http cleanup add: 0000000001C48038
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua run thread, top:0 c:1
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua start to read buffered request body
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua req body post read, c:2
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua has read buffered request body in a single run
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua request header: "Host: localhost"
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua request header: "Connection: close"
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua request header: "X-USER-A: zhangguanxing"
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua request header: "X-USER-D: zhangguanxing"
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua request header: "AUTHORIZATION: singnature"
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua resume returned 2
+2016/04/21 13:04:35 [error] 18789#0: *1 lua entry thread aborted: runtime error: /home/zhangguanxing/log-collector/lua/auth.lua:20: attempt to index local 'errors' (a boolean value)
+stack traceback:
+coroutine 0:
+	/home/zhangguanxing/log-collector/lua/auth.lua: in function </home/zhangguanxing/log-collector/lua/auth.lua:1>, client: 127.0.0.1, server: localhost, request: "GET /req HTTP/1.1", host: "localhost"
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua request cleanup: forcible=0
+2016/04/21 13:04:35 [debug] 18789#0: *1 http finalize request: 500, "/req?" a:1, c:1
+2016/04/21 13:04:35 [debug] 18789#0: *1 http special response: 500, "/req?"
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua capture header filter, uri "/req"
+2016/04/21 13:04:35 [debug] 18789#0: *1 HTTP/1.1 500 Internal Server Error
+Server: nginx/1.8.1
+Date: Thu, 21 Apr 2016 05:04:35 GMT
+Content-Type: text/html
+Content-Length: 192
+Connection: close
+
+2016/04/21 13:04:35 [debug] 18789#0: *1 write new buf t:1 f:0 0000000001C48350, pos 0000000001C48350, size: 161 file: 0, size: 0
+2016/04/21 13:04:35 [debug] 18789#0: *1 http write filter: l:0 f:0 s:161
+2016/04/21 13:04:35 [debug] 18789#0: *1 http output filter "/req?"
+2016/04/21 13:04:35 [debug] 18789#0: *1 http copy filter: "/req?"
+2016/04/21 13:04:35 [debug] 18789#0: *1 lua capture body filter, uri "/req"
+2016/04/21 13:04:35 [debug] 18789#0: *1 http postpone filter "/req?" 0000000001C48520
+2016/04/21 13:04:35 [debug] 18789#0: *1 write old buf t:1 f:0 0000000001C48350, pos 0000000001C48350, size: 161 file: 0, size: 0
+2016/04/21 13:04:35 [debug] 18789#0: *1 write new buf t:0 f:0 0000000000000000, pos 0000000000709B80, size: 140 file: 0, size: 0
+2016/04/21 13:04:35 [debug] 18789#0: *1 write new buf t:0 f:0 0000000000000000, pos 000000000070AEE0, size: 52 file: 0, size: 0
+2016/04/21 13:04:35 [debug] 18789#0: *1 http write filter: l:1 f:0 s:353
+2016/04/21 13:04:35 [debug] 18789#0: *1 http write filter limit 0
+2016/04/21 13:04:35 [debug] 18789#0: *1 writev: 353 of 353
+2016/04/21 13:04:35 [debug] 18789#0: *1 http write filter 0000000000000000
+2016/04/21 13:04:35 [debug] 18789#0: *1 http copy filter: 0 "/req?"
+2016/04/21 13:04:35 [debug] 18789#0: *1 http finalize request: 0, "/req?" a:1, c:1
+2016/04/21 13:04:35 [debug] 18789#0: *1 event timer add: 8: 5000:1461215080451
+2016/04/21 13:04:35 [debug] 18789#0: *1 http lingering close handler
+2016/04/21 13:04:35 [debug] 18789#0: *1 recv: fd:8 -1 of 4096
+2016/04/21 13:04:35 [debug] 18789#0: *1 recv() not ready (11: Resource temporarily unavailable)
+2016/04/21 13:04:35 [debug] 18789#0: *1 lingering read: -2
+2016/04/21 13:04:35 [debug] 18789#0: *1 event timer: 8, old: 1461215080451, new: 1461215080451
+2016/04/21 13:04:35 [debug] 18789#0: timer delta: 0
+2016/04/21 13:04:35 [debug] 18789#0: worker cycle
+2016/04/21 13:04:35 [debug] 18789#0: epoll timer: 5000
+2016/04/21 13:04:35 [debug] 18789#0: epoll: fd:8 ev:2011 d:0000000001C21E08
+2016/04/21 13:04:35 [debug] 18789#0: epoll_wait() error on fd:8 ev:2011
+2016/04/21 13:04:35 [debug] 18789#0: *1 http lingering close handler
+2016/04/21 13:04:35 [debug] 18789#0: *1 recv: fd:8 0 of 4096
+2016/04/21 13:04:35 [debug] 18789#0: *1 lingering read: 0
+2016/04/21 13:04:35 [debug] 18789#0: *1 http request count:1 blk:0
+2016/04/21 13:04:35 [debug] 18789#0: *1 http close request
+2016/04/21 13:04:35 [debug] 18789#0: *1 http log handler
+2016/04/21 13:04:35 [debug] 18789#0: *1 free: 0000000001C47060, unused: 0
+2016/04/21 13:04:35 [debug] 18789#0: *1 free: 0000000001C48070, unused: 2719
+2016/04/21 13:04:35 [debug] 18789#0: *1 close http connection: 8
+2016/04/21 13:04:35 [debug] 18789#0: *1 event timer del: 8: 1461215080451
+2016/04/21 13:04:35 [debug] 18789#0: *1 reusable connection: 0
+2016/04/21 13:04:35 [debug] 18789#0: *1 free: 0000000001C25340
+2016/04/21 13:04:35 [debug] 18789#0: *1 free: 0000000001C1D600, unused: 24
+2016/04/21 13:04:35 [debug] 18789#0: *1 free: 0000000001C1D710, unused: 72
+2016/04/21 13:04:35 [debug] 18789#0: timer delta: 0
+2016/04/21 13:04:35 [debug] 18789#0: worker cycle
+2016/04/21 13:04:35 [debug] 18789#0: epoll timer: -1
+2016/04/21 13:04:35 [notice] 18789#0: signal 3 (SIGQUIT) received, shutting down
+2016/04/21 13:04:35 [info] 18789#0: epoll_wait() failed (4: Interrupted system call)
+2016/04/21 13:04:35 [debug] 18789#0: timer delta: 49
+2016/04/21 13:04:35 [debug] 18789#0: flush files
+2016/04/21 13:04:35 [notice] 18789#0: exit
+2016/04/21 13:04:35 [debug] 18789#0: epoll del event: fd:6 op:2 ev:00000000
+2016/04/21 13:04:35 [debug] 18789#0: close listening 0.0.0.0:1984 #6 
+2016/04/21 13:04:35 [debug] 18789#0: run cleanup: 0000000001C39940
+2016/04/21 13:04:35 [debug] 18789#0: decrementing the reference count for Lua VM: 1
+2016/04/21 13:04:35 [debug] 18789#0: lua close the global Lua VM 0000000041115378
+2016/04/21 13:04:35 [debug] 18789#0: run cleanup: 0000000001C38EB0
+2016/04/21 13:04:35 [debug] 18789#0: run cleanup: 0000000001C38E80
+2016/04/21 13:04:35 [debug] 18789#0: run cleanup: 0000000001C38E50
+2016/04/21 13:04:35 [debug] 18789#0: run cleanup: 0000000001C37018
+2016/04/21 13:04:35 [debug] 18789#0: cleanup resolver
+2016/04/21 13:04:35 [debug] 18789#0: run cleanup: 0000000001C20238
+2016/04/21 13:04:35 [debug] 18789#0: free: 0000000001C43070
+2016/04/21 13:04:35 [debug] 18789#0: free: 0000000001C311E0
+2016/04/21 13:04:35 [debug] 18789#0: free: 0000000001C2C110
+2016/04/21 13:04:35 [debug] 18789#0: free: 0000000001C2B050
+2016/04/21 13:04:35 [debug] 18789#0: free: 0000000001C29F90
+2016/04/21 13:04:35 [debug] 18789#0: free: 0000000001C1DD20, unused: 0
+2016/04/21 13:04:35 [debug] 18789#0: free: 0000000001C2D1D0, unused: 0
+2016/04/21 13:04:35 [debug] 18789#0: free: 0000000001C321F0, unused: 0
+2016/04/21 13:04:35 [debug] 18789#0: free: 0000000001C36200, unused: 56
+2016/04/21 13:04:35 [debug] 18789#0: free: 0000000001C3F060, unused: 12712
