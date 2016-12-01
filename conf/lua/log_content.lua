@@ -39,7 +39,7 @@ if method == "POST" then
             end
          end
          
-         msg["session"] = session_id
+         msg["header-session"] = session_id
          msg["did"] = headers["X-USER-D"]
          msg["uid"] = headers["X-USER-A"] or "unknown"
          msg["density"] = headers["X-DENSITY"] or "unknown"
