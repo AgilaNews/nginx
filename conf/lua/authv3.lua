@@ -61,7 +61,6 @@ local needed =
    string.upper(method .. "\n" ..
    body_sign .. "\n" ..
    content_type .. "\n" ..
-   date .. "\n" ..
    header_param .. "\n" ..
    path .. "\n" ..
    uri_param)
