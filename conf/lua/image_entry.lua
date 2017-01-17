@@ -15,12 +15,16 @@ if method == "GET" then
         ngx.exit(res.status)
     else
         local mime = res.header["Content-Type"]
-        if not mime then
-            mime = "image/jpeg"
-        end
+        if mime == "image/gif" then
+            data = res.body
+        else
+            if not mime then
+                mime = "image/jpeg"
+            end
 
-        local handler = imagehandler:new()
-        local data, err = handler:doimg(ngx.req.get_uri_args(), res.body, mime)
+            local handler = imagehandler:new()
+            local data, err = handler:doimg(ngx.req.get_uri_args(), res.body, mime)
+        end
 
         if not data then
             ngx.log(ngx.WARN, "do img fail: " .. err)
