@@ -1,6 +1,7 @@
 local logger = require "logger"
 local cjson = require "cjson"
 local category = ngx.var.logger_category
+local realtime_logger_category = ngx.var.realtime_logger_category
 local realtime_event_ids = ngx.shared.realtime_event_ids
 
 if not logger.initted() then
