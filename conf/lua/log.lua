@@ -1,8 +1,7 @@
 local logger = require "logger"
 local cjson = require "cjson"
 local category = ngx.var.logger_category
-local realtime_category = ngx.var.realtime_logger_category
-
+local realtime_event_ids = ngx.shared.realtime_event_ids
 
 if not logger.initted() then
     local ok, err = logger.init {
@@ -23,7 +22,8 @@ end
 
 if ngx.ctx.messages then
     for i, item in pairs(ngx.ctx.messages) do
-        if realtime_event_id[item["event-id"]] == true then
+        local eventid = realtime_event_ids:get("event-id")
+        if item[eventid] != nil and item[eventid] == true then
             logger.log(realtime_logger_category, cjson.encode(item))
         end
         
