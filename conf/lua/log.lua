@@ -22,8 +22,7 @@ end
 
 if ngx.ctx.messages then
     for i, item in pairs(ngx.ctx.messages) do
-        local eventid = realtime_event_ids:get("event-id")
-        if item[eventid] != nil and item[eventid] == true then
+        if realtime_event_ids:get(item["event-id"]) == true then
             logger.log(realtime_logger_category, cjson.encode(item))
         end
         
