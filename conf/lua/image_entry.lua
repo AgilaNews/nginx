@@ -23,7 +23,7 @@ if method == "GET" then
             end
 
             local handler = imagehandler:new()
-            local data, err = handler:doimg(ngx.req.get_uri_args(), res.body, mime)
+            data, err = handler:doimg(ngx.req.get_uri_args(), res.body, mime)
         end
 
         if not data then
