@@ -147,6 +147,10 @@ function _M:v(params, img)
    if play_img == nil then
       return nil, "play image not found"
    else
+      vm = tonumber(params)
+      if vm >= 30 then
+         play_img = play_img:resize(vm, vm)
+      end
       img:composite(play_img,
                     (img:get_width() - play_img:get_width()) / 2,
                     (img:get_height() - play_img:get_height()) / 2,
