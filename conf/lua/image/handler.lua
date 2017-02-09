@@ -155,8 +155,8 @@ function _M:v(params, img)
          p:resize(vm, vm)
       end
       img:composite(p,
-                    (img:get_width() - play_img:get_width()) / 2,
-                    (img:get_height() - play_img:get_height()) / 2,
+                    (img:get_width() - p:get_width()) / 2,
+                    (img:get_height() - p:get_height()) / 2,
                     "OverCompositeOp")
       return img, nil
    end   
