@@ -151,9 +151,10 @@ function _M:v(params, img)
       local p = play_img
 
       if vm >= 30 then
-         p = p:clone():resize(vm, vm)
+         p = p:clone()
+         p:resize(vm, vm)
       end
-      img:composite(play_img,
+      img:composite(p,
                     (img:get_width() - play_img:get_width()) / 2,
                     (img:get_height() - play_img:get_height()) / 2,
                     "OverCompositeOp")
